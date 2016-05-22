@@ -4,13 +4,13 @@ import java.util.Properties;
 import com.assignment.payslip.util.AppConstants;
 
 /**
-* The FileProcessorFactory is a singleton class which is the factory of the different types File Processors.
-*
-* @author  Sidath Dassanayake
-* @version 0.0.1
-* @since   2016-05-08
-*/
-
+ * The DataProcessorFactory class is create DataProcessors according to the configuration.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
 public class DataProcessorFactory {
 	
 	private static DataProcessorFactory dataProcessorFactory;

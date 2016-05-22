@@ -17,6 +17,15 @@ import org.apache.commons.csv.CSVRecord;
 import com.assignment.payslip.domain.EmployeeSalaryDetails;
 import com.assignment.payslip.util.AppConstants;
 
+/**
+ * The DefaultCsvDataProcessor class is the implementation of the DataProcessor.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
 public class DefaultCsvDataProcessor implements DataProcessor {
 	
 	private static final String NEW_LINE_SEPARATOR = "\n";

@@ -3,6 +3,15 @@ package com.assignment.payslip.validation;
 import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.util.AppConstants;
 
+/**
+ *  First name validation rule implementation.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
 public class FirstNameValidationRule implements ValidationRule{
 	
 	public void validate(InputData data) throws IllegalArgumentException{

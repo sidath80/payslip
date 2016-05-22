@@ -6,7 +6,7 @@ import java.util.Properties;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.assignment.payslip.domain.PermanantEmployeePaySlip;
+import com.assignment.payslip.domain.PermanentEmployeePaySlip;
 import com.assignment.payslip.tax.TaxCaluculation;
 import com.assignment.payslip.tax.TaxFactory;
 import com.assignment.payslip.util.AppicationProperties;
@@ -25,8 +25,8 @@ public class PermanantEmployeePaySlipTest {
 	
 
 	@Test
-	public void annualSalarywith60050() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith60050() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -41,8 +41,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith120000() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith120000() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -57,8 +57,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith0() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith0() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -73,8 +73,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith999() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith999() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -89,8 +89,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith18200() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith18200() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -105,8 +105,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith37000() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith37000() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -121,8 +121,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith37001() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith37001() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -137,8 +137,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith80000() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith80000() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -153,8 +153,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith55555() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith55555() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -169,8 +169,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith80001() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith80001() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -185,8 +185,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith99999() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith99999() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -201,8 +201,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith180000() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith180000() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -217,8 +217,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith180001() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith180001() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");
@@ -233,8 +233,8 @@ public class PermanantEmployeePaySlipTest {
 	}
 	
 	@Test
-	public void annualSalarywith199999() {
-		PermanantEmployeePaySlip emp1=new PermanantEmployeePaySlip();
+	public void annualSalaryWith199999() {
+		PermanentEmployeePaySlip emp1=new PermanentEmployeePaySlip();
 		emp1.setTaxCaluculation(taxCaluculation);
 		emp1.setFirstName("David");
 		emp1.setLastName("Rudd");

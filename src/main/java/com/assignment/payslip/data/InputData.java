@@ -1,5 +1,14 @@
 package com.assignment.payslip.data;
 
+/**
+ * The InputData class is a POJO class which is hold input data.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
 public class InputData {
 	
 	String firstName;

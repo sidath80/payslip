@@ -1,12 +1,12 @@
 package com.assignment.payslip;
 
 /**
- * The Application Class will take a file type(CSV or other supported file
- * formats) from the command line. The Default will be CSV.
+ * The Application Class is the main class of the application
+ * 
  * 
  * @author Sidath Dassanayake
  * @version 0.0.1
- * @since 2016-05-08
+ * @since 2016-05-23
  */
 
 public class PaySlipApplication {

@@ -7,10 +7,19 @@ import java.util.Properties;
 import com.assignment.payslip.data.DataProcessorFactory;
 import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.domain.EmployeeSalaryDetails;
-import com.assignment.payslip.domain.PermanantEmployeePaySlip;
+import com.assignment.payslip.domain.PermanentEmployeePaySlip;
 import com.assignment.payslip.tax.TaxFactory;
 import com.assignment.payslip.util.AppicationProperties;
 import com.assignment.payslip.validation.ValidationManager;
+
+/**
+ * The PaySlipManager class is validate,read and write employee data
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
 
 
 public class PaySlipManager {
@@ -58,8 +67,8 @@ public class PaySlipManager {
 	
 	private void addToEmployee(InputData data) {
 		
-		PermanantEmployeePaySlip permanantEmployeePaySlip =
-			new PermanantEmployeePaySlip();
+		PermanentEmployeePaySlip permanantEmployeePaySlip =
+			new PermanentEmployeePaySlip();
 		permanantEmployeePaySlip.setTaxCaluculation(TaxFactory.getInstance(properties).
 			getTaxImplementation());
 		permanantEmployeePaySlip.setFirstName(data.getFirstName());

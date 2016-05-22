@@ -1,5 +1,15 @@
 package com.assignment.payslip.domain;
 
+/**
+ * Generic Employee class.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
+
 public class Employee {
 	
 	private String firstName;

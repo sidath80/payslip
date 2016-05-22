@@ -2,7 +2,17 @@ package com.assignment.payslip.domain;
 
 import com.assignment.payslip.tax.TaxCaluculation;
 
-public class PermanantEmployeePaySlip extends EmployeeSalaryDetails{
+/**
+ *  Permanent employee salary slip details.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
+
+public class PermanentEmployeePaySlip extends EmployeeSalaryDetails{
 	
 	private int annualSalary;
 	private int grossIncome;

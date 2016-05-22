@@ -1,5 +1,15 @@
 package com.assignment.payslip.tax;
 
+/**
+ *  TaxCalculation2012To2013 is the implementation of the tax for 2012 to 2013.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
+
 public class TaxCalculation2012To2013 implements TaxCaluculation{
 	
 
@@ -11,10 +21,7 @@ public class TaxCalculation2012To2013 implements TaxCaluculation{
 	
 	private int getBaseAmount(int salary){
 		
-		if(salary<=18200){
-			return 0;
-		}
-		else if(salary <=37000){
+		if(salary <=37000){   
 			return 0;
 		}
 		else if (salary <=80000){
@@ -23,14 +30,10 @@ public class TaxCalculation2012To2013 implements TaxCaluculation{
 		else if(salary <=180000){
 			return 17547;
 		}
-		else if(salary >180000){
+		else{                  //  (salary >180000)
 			return 54547;
 		}
-		else{
-			return 0;
-		}
 	}
-	
 	
 	private float getRatePerDollor(int salary){
 		
@@ -46,11 +49,8 @@ public class TaxCalculation2012To2013 implements TaxCaluculation{
 		else if(salary <=180000){
 			return (salary-80000)*0.37f;
 		}
-		else if(salary > 180000){
+		else {                 //(salary > 180000)
 			return (salary-180000)*0.45f;
-		}
-		else{
-			return 0.0f;
 		}
 	}
 	

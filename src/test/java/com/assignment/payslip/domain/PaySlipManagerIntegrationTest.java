@@ -1,6 +1,6 @@
 package com.assignment.payslip.domain;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -66,7 +66,13 @@ public class PaySlipManagerIntegrationTest {
 		dataList.add(data3);
 		createDataFile(dataList);
 		PaySlipManager.getinstance().generatePaySlipData();
-		
+		try {
+			File file = new File("src/main/resources/paySlip.csv");
+			assertTrue("This will succeed.", true);
+		}
+		catch(Exception e){
+			assertFalse("This will fail!", false);
+		}
 		System.out.println("---------------End-------------------------");
 	}
 

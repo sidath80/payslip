@@ -1,5 +1,15 @@
 package com.assignment.payslip.util;
 
+/**
+ *  Application constants.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
+
 public final class AppConstants {
 
 	private AppConstants() {

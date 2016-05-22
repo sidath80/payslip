@@ -1,5 +1,14 @@
 package com.assignment.payslip.validation;
 
+/**
+ *  Payment start date validation rule implementation.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
 import com.assignment.payslip.data.InputData;
 
 public class PaymentStartDateValidationRule implements ValidationRule{

@@ -1,5 +1,14 @@
 package com.assignment.payslip.domain;
 
+/**
+ *  Employee salary details class.
+ * 
+ * 
+ * @author Sidath Dassanayake
+ * @version 0.0.1
+ * @since 2016-05-23
+ */
+
 public abstract class  EmployeeSalaryDetails extends Employee{
 	
 	private float superRate;
