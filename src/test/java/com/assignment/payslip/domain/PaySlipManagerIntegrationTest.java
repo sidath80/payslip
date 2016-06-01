@@ -20,7 +20,7 @@ public class PaySlipManagerIntegrationTest {
 	
 	private static final String NEW_LINE_SEPARATOR = "\n";
 	
-	public void createDataFile(List<InputData> dataList) {
+	private void createDataFile(List<InputData> dataList) {
 		File csvJobFile = null;
 		FileWriter fileWriter = null;
 		CSVPrinter csvFilePrinter = null;
@@ -65,7 +65,7 @@ public class PaySlipManagerIntegrationTest {
 		dataList.add(data2);
 		dataList.add(data3);
 		createDataFile(dataList);
-		PaySlipManager.getinstance().generatePaySlipData();
+		PaySlipManager.getInstance().generatePaySlipData();
 		try {
 			File file = new File("src/main/resources/paySlip.csv");
 			assertTrue("This will succeed.", true);

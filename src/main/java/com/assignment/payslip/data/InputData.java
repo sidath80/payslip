@@ -11,11 +11,11 @@ package com.assignment.payslip.data;
 
 public class InputData {
 	
-	String firstName;
-	String lastName;
-	String annualSalary; 
-	String superRate;
-	String startDate;
+	private String firstName;
+	private String lastName;
+	private String annualSalary;
+	private String superRate;
+	private String startDate;
 	
 	public InputData(String firstName,String lastName,
 			String annualSalary,String superRate,String startDate){

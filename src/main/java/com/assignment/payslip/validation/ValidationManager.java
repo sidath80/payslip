@@ -15,7 +15,7 @@ public class ValidationManager {
 
 	}
 
-	public static ValidationManager getinstance() {
+	public static ValidationManager getInstance() {
 
 		if (validationManager == null) {
 			validationManager = new ValidationManager();

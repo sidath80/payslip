@@ -10,6 +10,6 @@ import com.assignment.payslip.data.InputData;
 * @since   2016-05-23
 */
 
-public interface ValidationRule {
+interface ValidationRule {
 	void validate(InputData data) throws IllegalArgumentException;
 }

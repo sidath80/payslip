@@ -9,7 +9,7 @@ import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.domain.EmployeeSalaryDetails;
 import com.assignment.payslip.domain.PermanentEmployeePaySlip;
 import com.assignment.payslip.tax.TaxFactory;
-import com.assignment.payslip.util.AppicationProperties;
+import com.assignment.payslip.util.ApplicationProperties;
 import com.assignment.payslip.validation.ValidationManager;
 
 /**
@@ -29,11 +29,11 @@ public class PaySlipManager {
 	private static PaySlipManager paySlipManager;
 
 	private PaySlipManager() {
-		properties = AppicationProperties.getinstance().load();
+		properties = ApplicationProperties.getInstance().load();
 		salaries=new ArrayList<EmployeeSalaryDetails>();
 	}
 
-	public static PaySlipManager getinstance() {
+	public static PaySlipManager getInstance() {
 
 		if (paySlipManager == null) {
 			paySlipManager = new PaySlipManager();
@@ -54,31 +54,31 @@ public class PaySlipManager {
 	}
 	
 	private List<Map<Integer, String>> validate(List<InputData> dataList){
-		return ValidationManager.getinstance().validate(dataList);
+		return ValidationManager.getInstance().validate(dataList);
 	}
 	
 	private List<InputData> read(){
-	    return DataProcessorFactory.getinstance().getDataProcessor(properties).read();	    
+	    return DataProcessorFactory.getInstance().getDataProcessor(properties).read();
 	}
 	
 	private void write(List<EmployeeSalaryDetails> salaries) {
-		 DataProcessorFactory.getinstance().getDataProcessor(properties).write(salaries);
+		 DataProcessorFactory.getInstance().getDataProcessor(properties).write(salaries);
 	}
 	
 	private void addToEmployee(InputData data) {
 		
-		PermanentEmployeePaySlip permanantEmployeePaySlip =
+		PermanentEmployeePaySlip permanentEmployeePaySlip =
 			new PermanentEmployeePaySlip();
-		permanantEmployeePaySlip.setTaxCaluculation(TaxFactory.getInstance(properties).
+		permanentEmployeePaySlip.setTaxCalculation(TaxFactory.getInstance(properties).
 			getTaxImplementation());
-		permanantEmployeePaySlip.setFirstName(data.getFirstName());
-		permanantEmployeePaySlip.setLastName(data.getLastName());
-		permanantEmployeePaySlip.setAnnualSalary(Integer.parseInt(data.getAnnualSalary()));
+		permanentEmployeePaySlip.setFirstName(data.getFirstName());
+		permanentEmployeePaySlip.setLastName(data.getLastName());
+		permanentEmployeePaySlip.setAnnualSalary(Integer.parseInt(data.getAnnualSalary()));
 		String supperRate=data.getSuperRate();
 		supperRate=supperRate.replace("%","");
-		permanantEmployeePaySlip.setSuperRate(Integer.parseInt(supperRate)*.01f);
-		permanantEmployeePaySlip.setPaymentStartDate(data.getStartDate());
-		salaries.add(permanantEmployeePaySlip);
+		permanentEmployeePaySlip.setSuperRate(Integer.parseInt(supperRate)*.01f);
+		permanentEmployeePaySlip.setPaymentStartDate(data.getStartDate());
+		salaries.add(permanentEmployeePaySlip);
 	}
 	
 }

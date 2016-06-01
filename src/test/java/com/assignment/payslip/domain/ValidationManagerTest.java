@@ -22,7 +22,7 @@ public class ValidationManagerTest {
 		dataList.add(data2);
 		dataList.add(data3);
 
-		List<Map<Integer, String>> errorList=ValidationManager.getinstance().validate(dataList);
+		List<Map<Integer, String>> errorList=ValidationManager.getInstance().validate(dataList);
 		assertEquals(errorList.size(), 0);
 
 	}
@@ -39,7 +39,7 @@ public class ValidationManagerTest {
 		dataList.add(data2);
 		dataList.add(data3);
 
-		List<Map<Integer, String>> errorList=ValidationManager.getinstance().validate(dataList);
+		List<Map<Integer, String>> errorList=ValidationManager.getInstance().validate(dataList);
 		assertEquals(errorList.size(), 3);
 
 	}
@@ -56,7 +56,7 @@ public class ValidationManagerTest {
 		dataList.add(data2);
 		dataList.add(data3);
 		
-		List<Map<Integer, String>> errorList=ValidationManager.getinstance().validate(dataList);
+		List<Map<Integer, String>> errorList=ValidationManager.getInstance().validate(dataList);
 		assertEquals(errorList.size(), 3);
 
 	}
@@ -73,7 +73,7 @@ public class ValidationManagerTest {
 		dataList.add(data2);
 		dataList.add(data3);
 		
-		List<Map<Integer, String>> errorList=ValidationManager.getinstance().validate(dataList);
+		List<Map<Integer, String>> errorList=ValidationManager.getInstance().validate(dataList);
 		assertEquals(errorList.size(), 3);
 
 	}
@@ -90,7 +90,7 @@ public class ValidationManagerTest {
 		dataList.add(data2);
 		dataList.add(data3);
 		
-		List<Map<Integer, String>> errorList=ValidationManager.getinstance().validate(dataList);
+		List<Map<Integer, String>> errorList=ValidationManager.getInstance().validate(dataList);
 		assertEquals(errorList.size(), 3);
 
 	}

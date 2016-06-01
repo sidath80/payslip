@@ -1,6 +1,6 @@
 package com.assignment.payslip.domain;
 
-import com.assignment.payslip.tax.TaxCaluculation;
+import com.assignment.payslip.tax.TaxCalculation;
 
 /**
  *  Permanent employee salary slip details.
@@ -18,7 +18,7 @@ public class PermanentEmployeePaySlip extends EmployeeSalaryDetails{
 	private int grossIncome;
 	private int incomeTax;
 	private int netIncome;
-	private TaxCaluculation taxCaluculation;
+	private TaxCalculation taxCalculation;
 	
 	public int getAnnualSalary() {
 		return annualSalary;
@@ -28,8 +28,8 @@ public class PermanentEmployeePaySlip extends EmployeeSalaryDetails{
 		this.annualSalary = annualSalary;
 	}
 	
-	public void setTaxCaluculation(TaxCaluculation taxCaluculation) {
-		this.taxCaluculation = taxCaluculation;
+	public void setTaxCalculation(TaxCalculation taxCalculation) {
+		this.taxCalculation = taxCalculation;
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class PermanentEmployeePaySlip extends EmployeeSalaryDetails{
 	
 	@Override
 	public int calculateIncomeTax() {
-	    this.incomeTax=Math.round(taxCaluculation.getTaxAmount(this.annualSalary));
+	    this.incomeTax=Math.round(taxCalculation.getTaxAmount(this.annualSalary));
 	    return this.incomeTax;
 	}
 

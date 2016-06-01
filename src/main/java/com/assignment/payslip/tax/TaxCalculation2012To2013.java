@@ -10,13 +10,12 @@ package com.assignment.payslip.tax;
  */
 
 
-public class TaxCalculation2012To2013 implements TaxCaluculation{
+public class TaxCalculation2012To2013 implements TaxCalculation {
 	
 
 	public float getTaxAmount(int salary) {
 		
-		float taxAmount=(getBaseAmount(salary)+getRatePerDollor(salary))/12;
-		return taxAmount;
+		return (getBaseAmount(salary)+ getRatePerDollar(salary))/12;
 	}
 	
 	private int getBaseAmount(int salary){
@@ -35,7 +34,7 @@ public class TaxCalculation2012To2013 implements TaxCaluculation{
 		}
 	}
 	
-	private float getRatePerDollor(int salary){
+	private float getRatePerDollar(int salary){
 		
 		if(salary<=18200){
 			return 0.0f;

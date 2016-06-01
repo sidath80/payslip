@@ -14,13 +14,13 @@ public abstract class  EmployeeSalaryDetails extends Employee{
 	private float superRate;
 	private String paymentStartDate;
 	
-	public float getSuperRate() {
+	 float getSuperRate() {
 		return superRate;
 	}
 	public void setSuperRate(float superRate) {
 		this.superRate = superRate;
 	}
-	public String getPaymentStartDate() {
+	String getPaymentStartDate() {
 		return paymentStartDate;
 	}
 	public void setPaymentStartDate(String paymentStartDate) {

@@ -28,7 +28,7 @@ public class TaxFactory {
 
 		return taxFactory;
 	}
-	public TaxCaluculation getTaxImplementation() {
+	public TaxCalculation getTaxImplementation() {
 		
 		if(properties.getProperty(AppConstants.FINANCIAL_YEAR) != null && properties.getProperty(AppConstants.FINANCIAL_YEAR).
 				equals(AppConstants.FINANCIAL_YEAR_2012_To_2013)){

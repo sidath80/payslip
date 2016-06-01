@@ -20,7 +20,7 @@ public class DataProcessorFactory {
 		
 	}
 	
-	public static DataProcessorFactory getinstance() {
+	public static DataProcessorFactory getInstance() {
 
 		if (dataProcessorFactory == null) {
 			dataProcessorFactory = new DataProcessorFactory();
