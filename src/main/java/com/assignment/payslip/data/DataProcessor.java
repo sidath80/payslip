@@ -12,7 +12,7 @@ import com.assignment.payslip.domain.EmployeeSalaryDetails;
  * @since 2016-05-23
  */
 
-interface DataProcessor {
+public interface DataProcessor {
 	 List<InputData> read();
 	 void write(List<EmployeeSalaryDetails> dataList);
 }
