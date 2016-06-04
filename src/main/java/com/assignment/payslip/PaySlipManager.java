@@ -9,11 +9,12 @@ import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.domain.EmployeeSalaryDetails;
 import com.assignment.payslip.domain.PermanentEmployeePaySlip;
 import com.assignment.payslip.tax.TaxFactory;
+import com.assignment.payslip.util.AppConstants;
 import com.assignment.payslip.util.ApplicationProperties;
 import com.assignment.payslip.validation.ValidationManager;
 
 /**
- * The PaySlipManager class is validate,read and write employee data
+ * The PaySlipManager class is generate pay slip information.
  * 
  * 
  * @author Sidath Dassanayake
@@ -51,6 +52,7 @@ public class PaySlipManager {
 				write(salaries);
 			}
 		}
+		System.out.println("Pay slip information @ "+properties.getProperty("payslip.file.path"));
 	}
 	
 	private List<Map<Integer, String>> validate(List<InputData> dataList){

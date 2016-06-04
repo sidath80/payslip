@@ -9,7 +9,7 @@ package com.assignment.payslip;
  * @since 2016-05-23
  */
 
- class PaySlipApplication {
+class PaySlipApplication {
 
 	public static void main(String[] args) {
 		PaySlipManager.getInstance().generatePaySlipData();

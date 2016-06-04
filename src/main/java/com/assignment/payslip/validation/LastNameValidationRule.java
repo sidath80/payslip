@@ -4,7 +4,7 @@ import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.util.AppConstants;
 
 /**
- *  Last Name validation rule implementation.
+ * Last Name validation rule implementation.
  * 
  * 
  * @author Sidath Dassanayake
@@ -12,9 +12,9 @@ import com.assignment.payslip.util.AppConstants;
  * @since 2016-05-23
  */
 
-public class LastNameValidationRule implements ValidationRule{
-	
-	public void validate(InputData data) throws IllegalArgumentException{
+public class LastNameValidationRule implements ValidationRule {
+
+	public void validate(InputData data) throws IllegalArgumentException {
 		try {
 			String input = data.getLastName();
 			if (!input.trim().matches(AppConstants.LAST_NAME_VALIDATION_RULE)) {

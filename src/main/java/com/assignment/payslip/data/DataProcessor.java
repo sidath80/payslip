@@ -4,7 +4,7 @@ import java.util.List;
 import com.assignment.payslip.domain.EmployeeSalaryDetails;
 
 /**
- * The DataProcessor interface 
+ * The DataProcessor interface
  * 
  * 
  * @author Sidath Dassanayake
@@ -13,6 +13,7 @@ import com.assignment.payslip.domain.EmployeeSalaryDetails;
  */
 
 public interface DataProcessor {
-	 List<InputData> read();
-	 void write(List<EmployeeSalaryDetails> dataList);
+	List<InputData> read();
+
+	void write(List<EmployeeSalaryDetails> dataList);
 }

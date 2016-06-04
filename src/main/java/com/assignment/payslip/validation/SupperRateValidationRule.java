@@ -4,7 +4,7 @@ import com.assignment.payslip.data.InputData;
 import com.assignment.payslip.util.AppConstants;
 
 /**
- *  Supper rate validation rule implementation.
+ * Supper rate validation rule implementation.
  * 
  * 
  * @author Sidath Dassanayake
@@ -12,9 +12,9 @@ import com.assignment.payslip.util.AppConstants;
  * @since 2016-05-23
  */
 
-public class SupperRateValidationRule implements ValidationRule{
-	
-	public void validate(InputData data) throws IllegalArgumentException{
+public class SupperRateValidationRule implements ValidationRule {
+
+	public void validate(InputData data) throws IllegalArgumentException {
 		try {
 			String input = data.getSuperRate();
 			if (!input.trim().matches(AppConstants.SUPER_RATE_VALIDATION_RULE.trim())) {

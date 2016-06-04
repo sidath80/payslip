@@ -27,7 +27,7 @@ import com.assignment.payslip.util.AppConstants;
  */
 
 public class DefaultCsvDataProcessor implements DataProcessor {
-	
+
 	private static final String NEW_LINE_SEPARATOR = "\n";
 
 	private Properties properties;
@@ -36,7 +36,7 @@ public class DefaultCsvDataProcessor implements DataProcessor {
 		this.properties = properties;
 	}
 
-	 public List<InputData> read() {
+	public List<InputData> read() {
 
 		FileReader csvFileReader = null;
 		CSVParser csvFileParser = null;
@@ -55,14 +55,17 @@ public class DefaultCsvDataProcessor implements DataProcessor {
 			}
 		} catch (FileNotFoundException fe) {
 			System.out.println("There is no job file to start the application.");
+			throw new RuntimeException("There is no job file to start the application.");
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException(e.getMessage());
 		} finally {
 			try {
 				csvFileReader.close();
 				csvFileParser.close();
 			} catch (Exception e) {
-				// e.printStackTrace();
+				e.printStackTrace();
+				throw new RuntimeException(e.getMessage());
 			}
 		}
 		return dataList;
@@ -81,16 +84,19 @@ public class DefaultCsvDataProcessor implements DataProcessor {
 			csvFilePrinter = new CSVPrinter(fileWriter, csvFileFormat);
 			for (EmployeeSalaryDetails data : dataList) {
 				List<String> row = new ArrayList<String>();
-				row.add(data.getFirstName()+" "+data.getLastName());
+				row.add(data.getFirstName() + " " + data.getLastName());
 				row.add(data.getPayPeriod());
-				row.add(data.calculateGrossIncome()+"");
-				row.add(data.calculateIncomeTax()+"");
-				row.add(data.calculateNetIncome()+"");
-				row.add(data.calculateSupper()+"");
+				row.add(data.calculateGrossIncome() + "");
+				row.add(data.calculateIncomeTax() + "");
+				row.add(data.calculateNetIncome() + "");
+				row.add(data.calculateSupper() + "");
 				csvFilePrinter.printRecord(row);
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
+			throw new RuntimeException(e.getMessage());
+			
 		} finally {
 			try {
 				fileWriter.flush();
@@ -98,6 +104,7 @@ public class DefaultCsvDataProcessor implements DataProcessor {
 				csvFilePrinter.close();
 			} catch (IOException e) {
 				e.printStackTrace();
+				throw new RuntimeException(e.getMessage());
 			}
 		}
 	}

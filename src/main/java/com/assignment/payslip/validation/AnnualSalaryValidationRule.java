@@ -3,7 +3,7 @@ package com.assignment.payslip.validation;
 import com.assignment.payslip.data.InputData;
 
 /**
- *  Annual salary validation rule implementation.
+ * Annual salary validation rule implementation.
  * 
  * 
  * @author Sidath Dassanayake
@@ -11,13 +11,12 @@ import com.assignment.payslip.data.InputData;
  * @since 2016-05-23
  */
 
+public class AnnualSalaryValidationRule implements ValidationRule {
 
-public class AnnualSalaryValidationRule  implements ValidationRule{
-	
-	public void validate(InputData data) throws IllegalArgumentException{
+	public void validate(InputData data) throws IllegalArgumentException {
 		try {
-			int salary=Integer.parseInt(data.getAnnualSalary());
-			if(salary <=0){
+			int salary = Integer.parseInt(data.getAnnualSalary());
+			if (salary <= 0) {
 				throw new IllegalArgumentException("Annual Salary should be an positive integer value");
 			}
 		} catch (Exception e) {

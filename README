@@ -1,46 +1,41 @@
 							             README
 							             ======
 							
-				Calculate the Total Printing cost (printingcost) API 0.0.1 release
+				Pay Slip Calculation Details (salary-payslip) API 0.0.1 release
 	    		-------------------------------------------------------------
 	    		
-Welcome to the Calculate Total Printing cost API 0.0.1 release!  This release includes versions of the 
-printingcost API implementation.
+Welcome to the Pay Slip Calculation Details API 0.0.1 release!  This release includes versions of the 
+salary-payslip API implementation.
 
 JDK Version notes
 =============================================================================================
 
-The printingcost API supports JDK 1.6 or higher.  Note that I have currently tested this 
+The salary-payslip API supports JDK 1.6 or higher.  Note that I have currently tested this 
 implementation with  1.6 and 1.7.
-
-This Application process the file and print the total cost of it. The file type can be given as a 
-command line argument. Currently it supports only .csv file. If there is no any input from the user, system 
-takes the default file type as .csv and start the execution.
 
 Assumptions 
 ==============================================================================================
-		1. This Application currently supports only A4 page type and for others it returns an error message.
-		2. If there are errors in the input file, application prints those errors in the
-		   terminal and terminate the process.
-		3. All prices of the page types are in the application.properties file.
-		4. Sample data (10,5,true,A4) =>(total pages,total color pages,is double side,page type)
+		1. Salary input data file is in the src/main/resources/salarydata.csv and follow the following
+		format 
+		(first name, last name, annual salary, super rate (%), payment start date)
+		(David,Rudd,60050,9%,01 March – 31 March).
+		
+		2. All input data are validated according to the following format
+		   first name : Allows only alphabet characters
+		   last name  : Allows only alphabet characters
+		   annual salary : Integers
+		   super rate    : (0% - 50% inclusive)
+		   payment start date : Not going to validate it.
+		   
+		3. Pay slip calculation details are write into the src/main/resources/payslip.csv
+		
+		4. You can change the following properties in the application.properties file and 
+		run the application
+		
+		salary.data.file.type=csv (If you change this you should  implement the actual implementation)
+		salary.data.file.path=src/main/resources/salarydata.csv
+		payslip.file.path=src/main/resources/paySlip.csv
+		financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
 
-GIT - Please use the branch "processPrintJobs" to clone  source files from the bare repository.
-==============================================================================================
-* remote origin
-  Fetch URL: /home/sidath/git/papercutrepo.git
-  Push  URL: /home/sidath/git/papercutrepo.git
-  HEAD branch: master
-  Remote branches:
-    master           tracked
-    processPrintJobs tracked
-  Local branches configured for 'git pull':
-    master           merges with remote master
-    processPrintJobs merges with remote processPrintJobs
-  Local refs configured for 'git push':
-    master           pushes to master           (up to date)
-    processPrintJobs pushes to processPrintJobs (up to date)
-    
-    
 		
 		

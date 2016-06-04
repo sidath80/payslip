@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import com.assignment.payslip.data.InputData;
 
-
 public class ValidationManager {
 
 	private static ValidationManager validationManager;
@@ -27,7 +26,7 @@ public class ValidationManager {
 	public List<Map<Integer, String>> validate(List<InputData> dataList) {
 
 		List<ValidationRule> rules = getValidationRules();
-		List<Map<Integer, String>> errorList=new ArrayList<Map<Integer, String>>();
+		List<Map<Integer, String>> errorList = new ArrayList<Map<Integer, String>>();
 		Integer recordCount = 1;
 		for (InputData data : dataList) {
 			for (ValidationRule rule : rules) {
@@ -44,7 +43,7 @@ public class ValidationManager {
 		printErrorMessages(errorList);
 		return errorList;
 	}
-	
+
 	private List<ValidationRule> getValidationRules() {
 		List<ValidationRule> rules = new ArrayList<ValidationRule>();
 		rules.add(new FirstNameValidationRule());
@@ -54,7 +53,7 @@ public class ValidationManager {
 		rules.add(new PaymentStartDateValidationRule());
 		return rules;
 	}
-	
+
 	private void printErrorMessages(List<Map<Integer, String>> errorList) {
 
 		for (Map<Integer, String> errorMap : errorList) {
