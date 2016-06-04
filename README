@@ -36,6 +36,15 @@ Assumptions
 		salary.data.file.path=src/main/resources/salarydata.csv
 		payslip.file.path=src/main/resources/paySlip.csv
 		financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
+		
+		5. Latest version of the application will be available at the 
+		
+			Fetch URL: https://github.com/sidath80/payslip.git
+  			Push  URL: https://github.com/sidath80/payslip.git
+  			HEAD branch: master
+  			Remote branch: master tracked
+			
+		
 
 		
 		

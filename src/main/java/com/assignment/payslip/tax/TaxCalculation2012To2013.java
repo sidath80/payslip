@@ -20,7 +20,7 @@ public class TaxCalculation2012To2013 implements TaxCalculation {
 	private final static int salaryStage1ForRate=18200;
 	private final static int salaryStage2ForRate=37000;
 	private final static int salaryStage3ForRate=80000;
-	private final static int salaryStage14ForRate=180000;
+	private final static int salaryStage4ForRate=180000;
 
 
 	public float getTaxAmount(int salary) {
@@ -49,7 +49,7 @@ public class TaxCalculation2012To2013 implements TaxCalculation {
 			return (salary - 18200) * 0.19f;
 		} else if (salary <= salaryStage3ForRate) {
 			return (salary - 37000) * 0.325f;
-		} else if (salary <= salaryStage14ForRate) {
+		} else if (salary <= salaryStage4ForRate) {
 			return (salary - 80000) * 0.37f;
 		} else { // (salary > 180000)
 			return (salary - 180000) * 0.45f;
