@@ -92,11 +92,11 @@ public class DefaultCsvDataProcessor implements DataProcessor {
 				row.add(data.calculateSupper() + "");
 				csvFilePrinter.printRecord(row);
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
-			
+
 		} finally {
 			try {
 				fileWriter.flush();

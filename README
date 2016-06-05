@@ -15,29 +15,30 @@ implementation with  1.6 and 1.7.
 
 Assumptions 
 ==============================================================================================
-		1. Salary input data file is in the src/main/resources/salarydata.csv and follow the following
-		format 
-		(first name, last name, annual salary, super rate (%), payment start date)
-		(David,Rudd,60050,9%,01 March – 31 March).
+		1. Salary input data file is in the "src/main/resources/salarydata.csv" folder with the following
+		format.
 		
-		2. All input data are validated according to the following format
-		   first name : Allows only alphabet characters
-		   last name  : Allows only alphabet characters
-		   annual salary : Integers
-		   super rate    : (0% - 50% inclusive)
-		   payment start date : Not going to validate it.
+			(first name, last name, annual salary, super rate (%), payment start date)
+			(David,Rudd,60050,9%,01 March – 31 March).
+		
+		2. All input data are validated according to the following rules.
+		
+		   	first name : Allows only alphabet characters
+		   	last name  : Allows only alphabet characters
+		   	annual salary : Integers
+		   	super rate    : (0% - 50% inclusive)
+		   	payment start date : Not going to validate it
 		   
-		3. Pay slip calculation details are write into the src/main/resources/payslip.csv
+		3. Pay slip calculation details will be  written into the src/main/resources/payslip.csv.
 		
-		4. You can change the following properties in the application.properties file and 
-		run the application
+		4. You can change the following properties in the application.properties file according to the requirement.
 		
-		salary.data.file.type=csv (If you change this you should  implement the actual implementation)
-		salary.data.file.path=src/main/resources/salarydata.csv
-		payslip.file.path=src/main/resources/paySlip.csv
-		financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
+			salary.data.file.type=csv (If you change this you should  implement the actual implementation)
+			salary.data.file.path=src/main/resources/salarydata.csv
+			payslip.file.path=src/main/resources/paySlip.csv
+			financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
 		
-		5. Latest version of the application will be available at the 
+		5. Latest version of the code available at the 
 		
 			Fetch URL: https://github.com/sidath80/payslip.git
   			Push  URL: https://github.com/sidath80/payslip.git

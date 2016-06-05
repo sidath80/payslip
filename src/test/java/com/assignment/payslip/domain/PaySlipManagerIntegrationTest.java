@@ -53,7 +53,7 @@ public class PaySlipManagerIntegrationTest {
 	}
 
 	@Test
-	public void totalCostShouldEqualTo1400() {
+	public void intergrationTest() {
 		
 		System.out.println("---------------Test Start------------------");
 		
