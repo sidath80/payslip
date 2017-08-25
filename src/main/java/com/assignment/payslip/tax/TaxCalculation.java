@@ -1,6 +1,8 @@
 package com.assignment.payslip.tax;
 
+import java.math.BigDecimal;
+
 public interface TaxCalculation {
 	
-	float getTaxAmount(int salary);
+	BigDecimal getTaxAmount(int salary);
 }

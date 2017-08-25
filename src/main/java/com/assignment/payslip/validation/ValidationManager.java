@@ -58,7 +58,7 @@ public class ValidationManager {
 
 		for (Map<Integer, String> errorMap : errorList) {
 			for (Map.Entry<Integer, String> entry : errorMap.entrySet()) {
-				System.out.println("Error found in Row no " + entry.getKey() + " : " + entry.getValue());
+				System.out.println("Validation result found in Row no " + entry.getKey() + " : " + entry.getValue());
 			}
 		}
 	}

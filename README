@@ -10,8 +10,8 @@ salary-payslip API implementation.
 JDK Version notes
 =============================================================================================
 
-The salary-payslip API supports JDK 1.6 or higher.  Note that I have currently tested this 
-implementation with  1.6 and 1.7.
+The salary-payslip API supports JDK 1.8 or higher and Maven 3.0 or higher.  Note that I have currently tested this 
+implementation with JDK 1.8
 
 Assumptions 
 ==============================================================================================
@@ -19,7 +19,7 @@ Assumptions
 		format.
 		
 			(first name, last name, annual salary, super rate (%), payment start date)
-			(David,Rudd,60050,9%,01 March â€“ 31 March).
+			(David,Rudd,60050,9%,01 March – 31 March).
 		
 		2. All input data are validated according to the following rules.
 		
@@ -37,6 +37,14 @@ Assumptions
 			salary.data.file.path=src/main/resources/salarydata.csv
 			payslip.file.path=src/main/resources/paySlip.csv
 			financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
+			
+	    5. To run the test, type "mvn test"
+	       
+	        This will run the following test classes 
+	         1. PaySlipManagerIntegrationTest.java - Which will read the sample salarydata.csv file and generate the paySlip.csv file
+	         2. PermanentEmployeePaySlipTest.java - Which will cover the all functions related to the salary calculations.
+	         3. TaxCalculation2012To2013Test.java - Which will cover the tax calculations related to the  FINANCIAL_YEAR_2012_To_2013 implementation.
+	         4. ValidationManagerTest.java - Which will cover the validation of the all input data
 		
 		5. Latest version of the code available at the 
 		
@@ -44,6 +52,11 @@ Assumptions
   			Push  URL: https://github.com/sidath80/payslip.git
   			HEAD branch: master
   			Remote branch: master tracked
+			
+		
+
+		
+		
 			
 		
 

@@ -1,5 +1,8 @@
 package com.assignment.payslip.domain;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import com.assignment.payslip.tax.TaxCalculation;
 
 /**
@@ -8,7 +11,7 @@ import com.assignment.payslip.tax.TaxCalculation;
  * 
  * @author Sidath Dassanayake
  * @version 0.0.1
- * @since 2016-05-23
+ * @since 2017-08-23
  */
 
 public class PermanentEmployeePaySlip extends EmployeeSalaryDetails {
@@ -18,6 +21,8 @@ public class PermanentEmployeePaySlip extends EmployeeSalaryDetails {
 	private int incomeTax;
 	private int netIncome;
 	private TaxCalculation taxCalculation;
+	
+	private final static BigDecimal noOfMonths=new BigDecimal(12);
 
 	public int getAnnualSalary() {
 		return annualSalary;
@@ -39,14 +44,18 @@ public class PermanentEmployeePaySlip extends EmployeeSalaryDetails {
 	@Override
 	public int calculateGrossIncome() {
 
-		float gIncome = (float) this.annualSalary / 12;
-		this.grossIncome = Math.round(gIncome);
+		//float gIncome = (float) this.annualSalary / 12;
+		BigDecimal grossIncome=  new BigDecimal(this.annualSalary);
+		grossIncome=grossIncome.divide(noOfMonths, BigDecimal.ROUND_HALF_UP);
+		grossIncome = grossIncome.setScale(0, RoundingMode.HALF_UP);
+		this.grossIncome = grossIncome.intValue();
+		
 		return this.grossIncome;
 	}
 
 	@Override
 	public int calculateIncomeTax() {
-		this.incomeTax = Math.round(taxCalculation.getTaxAmount(this.annualSalary));
+		this.incomeTax = taxCalculation.getTaxAmount(this.annualSalary).intValue();
 		return this.incomeTax;
 	}
 
