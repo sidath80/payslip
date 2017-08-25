@@ -17,7 +17,7 @@ import java.util.Properties;
 */
 
 
-public class ApplicationProperties {
+public class  ApplicationProperties {
 	
 	private static ApplicationProperties applicationProperties;
 
@@ -34,12 +34,12 @@ public class ApplicationProperties {
 		return applicationProperties;
 	}
 	
-	public Properties load(){
+	public  Properties load(){
 		
 		Properties prop = new Properties();
 		InputStream input = null;
 		try {
-			File propertyFile = new File(this.getClass().getResource("/application.properties").toURI());
+		    File propertyFile = new File(this.getClass().getResource("/application.properties").toURI());
 			input = new FileInputStream(propertyFile);
 			prop.load(input);
 			

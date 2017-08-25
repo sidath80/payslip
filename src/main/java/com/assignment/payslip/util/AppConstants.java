@@ -1,5 +1,7 @@
 package com.assignment.payslip.util;
 
+import java.math.BigDecimal;
+
 /**
  *  Application constants.
  * 
@@ -27,5 +29,21 @@ public final class AppConstants {
 	public static final String SUPER_RATE_VALIDATION_RULE="^(0|[1-9]|[1-4][0-9]|50)[%]$";
 	
 	public static final String FINANCIAL_YEAR_2012_To_2013="FINANCIAL_YEAR_2012_To_2013";
+	
+	
+	public  static final String SAL_STG1="salaryStage1";
+	public  static final String SAL_STG2="salaryStage2";
+	public  static final String SAL_STG3="salaryStage3";
+	public  static final String SAL_STG4="salaryStage4";
+	
+	public  static final String TAX_BASE_0="taxBaseAmount0";
+	public  static final String TAX_BASE_1="taxBaseAmount1";
+	public  static final String TAX_BASE_2="taxBaseAmount2";
+	public  static final String TAX_BASE_3="taxBaseAmount3";
+	
+	public  static final String  SAL_STG2_RATE="salaryStage2Rate";
+	public  static final String  SAL_STG3_RATE="salaryStage3Rate";
+	public  static final String  SAL_STG4_RATE="salaryStage4Rate";
+	public  static final String  SAL_STG5_RATE="salaryStage5Rate";
 	
 }

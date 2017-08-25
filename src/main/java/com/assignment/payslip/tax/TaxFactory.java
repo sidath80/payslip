@@ -34,7 +34,7 @@ public class TaxFactory {
 
 		if (properties.getProperty(AppConstants.FINANCIAL_YEAR) != null && properties
 				.getProperty(AppConstants.FINANCIAL_YEAR).equals(AppConstants.FINANCIAL_YEAR_2012_To_2013)) {
-			return new TaxCalculation2012To2013();
+			return new TaxCalculation2012To2013(properties);
 		} else {
 			throw new RuntimeException("No Implementation is  found for this configuration");
 		}

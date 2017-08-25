@@ -38,6 +38,8 @@ Assumptions
 			payslip.file.path=src/main/resources/paySlip.csv
 			financial.year=FINANCIAL_YEAR_2012_To_2013 (If you change this you should  implement the actual implementation)
 			
+			All tax related configuration will be in this file. 
+			
 	    5. To run the test, type "mvn test"
 	       
 	        This will run the following test classes 
