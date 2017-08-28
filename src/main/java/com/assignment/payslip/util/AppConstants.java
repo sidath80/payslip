@@ -41,9 +41,9 @@ public final class AppConstants {
 	public  static final String TAX_BASE_2="taxBaseAmount2";
 	public  static final String TAX_BASE_3="taxBaseAmount3";
 	
+	public  static final String  SAL_STG1_RATE="salaryStage1Rate";
 	public  static final String  SAL_STG2_RATE="salaryStage2Rate";
 	public  static final String  SAL_STG3_RATE="salaryStage3Rate";
 	public  static final String  SAL_STG4_RATE="salaryStage4Rate";
-	public  static final String  SAL_STG5_RATE="salaryStage5Rate";
 	
 }

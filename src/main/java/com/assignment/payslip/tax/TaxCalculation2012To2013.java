@@ -46,10 +46,10 @@ public class TaxCalculation2012To2013 implements TaxCalculation {
 		 this.taxBaseAmount2=Integer.parseInt(properties.getProperty(AppConstants.TAX_BASE_2));
 		 this.taxBaseAmount3=Integer.parseInt(properties.getProperty(AppConstants.TAX_BASE_3));
 		 
-		 this.salaryStage2Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG2_RATE)));
-		 this.salaryStage3Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG3_RATE)));
-		 this.salaryStage4Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG4_RATE)));
-		 this.salaryStage5Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG5_RATE)));
+		 this.salaryStage2Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG1_RATE)));
+		 this.salaryStage3Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG2_RATE)));
+		 this.salaryStage4Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG3_RATE)));
+		 this.salaryStage5Rate=new BigDecimal(Float.parseFloat(properties.getProperty(AppConstants.SAL_STG4_RATE)));
 		 
 	}
 
